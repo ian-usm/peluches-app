@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className={`${ibmPlexMono.className} text-lg tracking-wide min-h-screen flex flex-col items-center`}>
         <header className="flex flex-col items-center py-6 space-y-3">
           <h1 className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-red-800 text-center break-words ${schoolbell.className}`}>
-            Peluchitowos
+            Peluchitos :3 
           </h1>
 
           <nav className="flex gap-6">

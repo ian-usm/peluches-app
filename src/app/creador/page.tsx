@@ -3,31 +3,51 @@
 import { useState } from "react";
 
 export default function CreadorPage() {
-  const [color, setColor] = useState("black");
+  const [cuerpo, setCuerpo] = useState("gato-negro.png");
+  const [boca, setBoca] = useState("boca-gato.png");
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-6">
-      <div
-        className={`w-40 h-40 rounded-full ${
-          color === "black" ? "bg-black" : "bg-pink-400"
-        }`}
-      />
+    <div className="flex flex-col items-center gap-8 mt-10">
+      
+      {/* Lienzo */}
+      <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px]">
+        <img
+          src={`/creador/cuerpos/${cuerpo}`}
+          className="absolute inset-0"
+        />
 
+        <img
+          src="/creador/ojos/ojos-default.png"
+          className="absolute inset-0"
+        />
+
+        <img
+          src={`/creador/bocas/${boca}`}
+          className="absolute inset-0"
+        />
+      </div>
+
+      {/* Controles */}
       <div className="flex gap-4">
-        <button
-          onClick={() => setColor("black")}
-          className="px-4 py-2 bg-gray-800 text-white rounded"
-        >
+        <button onClick={() => setCuerpo("gato-negro.png")}>
           Negro
         </button>
-
-        <button
-          onClick={() => setColor("pink")}
-          className="px-4 py-2 bg-pink-400 text-white rounded"
-        >
-          Rosa
+        <button onClick={() => setCuerpo("gato-rosado.png")}>
+          rosado
+        </button>
+        <button onClick={() => setCuerpo("gato-blanco.png")}>
+          Blanco
         </button>
       </div>
-    </main>
+
+      <div className="flex gap-4">
+        <button onClick={() => setBoca("boca-gato.png")}>
+          😊
+        </button>
+        <button onClick={() => setBoca("boca-triste.png")}>
+          ☹️
+        </button>
+      </div>
+    </div>
   );
 }
