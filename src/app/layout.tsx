@@ -36,7 +36,7 @@ export default function RootLayout({
 
           <nav className="flex gap-6">
             <Link
-              href="/"
+              href="/productos"
               className="text-red-800 text-lg hover:text-red-500 transition"
             >
               Productos
